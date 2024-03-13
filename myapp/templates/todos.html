@@ -1,0 +1,9 @@
+{% extends "base.html" %} 
+{% block content %} 
+        <h1>TDL </h1> 
+        <ul>
+            {% for todo in todos %} 
+                {{todo.title}}:<li><div>{{todo.deadline}}</div>{%if todo.completed %} finsh{% else %} No finish{% endif %}</li>
+            {% endfor %}
+        </ul>
+{% endblock %}
